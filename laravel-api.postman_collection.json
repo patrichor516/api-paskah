@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "4dbd2828-11ec-40ac-8611-74bd9858ca86",
+		"name": "laravel-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22603191"
+	},
+	"item": [
+		{
+			"name": "INDEX",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/barang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SHOW",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/barang/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"barang",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STORE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nama_barang",
+							"value": "Sampoerna Mild",
+							"type": "text"
+						},
+						{
+							"key": "jenis_barang",
+							"value": "lokal",
+							"type": "text"
+						},
+						{
+							"key": "stok_barang",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/barang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nama_barang",
+							"value": "Camel Ungu",
+							"type": "text"
+						},
+						{
+							"key": "jenis_barang",
+							"value": "lokal",
+							"type": "text"
+						},
+						{
+							"key": "stok_barang",
+							"value": "8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/barang/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"barang",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nama_barang",
+							"value": "Sampoerna Mild",
+							"type": "text"
+						},
+						{
+							"key": "jenis_barang",
+							"value": "lokal",
+							"type": "text"
+						},
+						{
+							"key": "stok_barang",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/barang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"barang"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
