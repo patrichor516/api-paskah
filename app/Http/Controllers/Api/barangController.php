@@ -14,6 +14,7 @@ class barangController extends Controller
      */
     public function index()
     {
+        //menampilkan data yang di buat 
        $data = barang::orderBy('nama_barang','asc')->get(); 
        return response()->json([
         'status'=> true,
@@ -27,6 +28,7 @@ class barangController extends Controller
      */
     public function store(Request $request)
     {
+        //menambahkan data baru 
         $dataBarang = new barang;
 
         $rules = [
@@ -34,7 +36,7 @@ class barangController extends Controller
             'jenis_barang' => 'required',
             'stok_barang'  => 'required|numeric',
         ];
-        $validator = Validator::make($request->all(),$rules);
+        $validator = Validator::make($request->all(),$rules); //memvalidasi data, jika tidak sesuai 
         if($validator->fails()){
             return response()->json([
                 'status' => false,
@@ -43,6 +45,7 @@ class barangController extends Controller
             ]);
         }
        
+        //isian dari inputan dataBarang yang ingin dibuat
         $dataBarang -> nama_barang = $request -> nama_barang;
         $dataBarang -> jenis_barang = $request -> jenis_barang;
         $dataBarang -> stok_barang = $request -> stok_barang;
@@ -60,6 +63,7 @@ class barangController extends Controller
      */
     public function show(string $id)
     {
+        //mencari data barang menggunakan id
         $data = barang::find($id);
         if ($data) {
             return response()->json([
@@ -80,6 +84,7 @@ class barangController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        //mengupdate/edit data barang yang telat dibuat
         $dataBarang = barang::find($id);
         if(empty($dataBarang)){
             return response()->json([

@@ -19,6 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//menhubungkan antara codingan dan api agar crud dapat berfungsi | cek postman untuk isinya
+
 // Route::get('barang',[barangController::class,'index']);
 // Route::get('barang/{id}',[barangController::class,'show']);
 // Route::post('barang/',[barangController::class,'store']);

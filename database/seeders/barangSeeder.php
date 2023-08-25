@@ -12,6 +12,8 @@ class barangSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
+
+    //untuk membuat data palsu 
     {
         $faker = \Faker\Factory::create('id_ID');
         for ($i=0 ; $i < 10  ; $i++ ){
